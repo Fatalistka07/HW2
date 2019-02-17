@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Form submition</name>
+	<description>Набор кейсов, где нажимается кнопка &quot;Оставить заявку&quot;</description>
+	<sections>
+		<section>
+		<name>FormSubmitted</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C1</id>
+				<title>CorrectFormSubmitted</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;
+[C3]
+[C6]
+[C11]
+[C15]
+[C18]
+флажок &quot;Я принимаю условия передачи информации&quot; отмечен</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажата кнопка &quot;Оставить заявку&quot;</content><expected>Информация успешно отправлена</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>FormNotSubmitted</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C24</id>
+				<title>EmptyFormNotSubmitted</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>[C5]
+[C7]
+[C14]
+[C17]
+флажок &quot;Я принимаю условия передачи информации&quot; не выставлен</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажата кнопка &quot;Оставить заявку&quot;</content><expected>Данные не отправлены, форма осталась с красными полями.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C25</id>
+				<title>CorrentFormNoAcceptNotSubmitted</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>[C3]
+[C6]
+[C11]
+флажок &quot;Я принимаю условия передачи информации&quot; не выставлен</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажата кнопка &quot;Оставить заявку&quot;</content><expected>Данные не отправлены, под флажком &quot;Я принимаю условия передачи информации&quot; появилась подсказка &quot;Для продолжения нужно согласие с условиями&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

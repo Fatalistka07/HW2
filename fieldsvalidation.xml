@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S2</id>
+	<name>FieldsValidation</name>
+	<description>проверка заполнения данных в конкретных полях</description>
+	<sections>
+		<section>
+		<name>Test Cases</name>
+		<description></description>
+									</section>
+			<section>
+		<name>RegionValidation</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C3</id>
+				<title>RegionValid</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Ваш город или регион&quot; любым значением из выпадающего списка и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C4</id>
+				<title>RegionUnknown</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Ваш город или регион&quot; заполнено несуществующим в России городом/регионом, например &quot;Лондон&quot; и перевести курсор в другое поле</content><expected>поле &quot;Ваш город или регион&quot; станет с красной рамкой, появится подсказка &quot;Введите другой регион&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C5</id>
+				<title>RegionEmpty</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Ваш город или регион&quot; сделано пустым, затем перевести курсор в другое поле</content><expected>поле &quot;Ваш город или регион&quot; станет с красной рамкой</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>FIOValidation</name>
+		<description>Проверка корректности заполнения поля &quot;Фамилия, Имя Отчество&quot;</description>
+						
+		<cases>
+									
+						<case>
+				<id>C6</id>
+				<title>FIOValid</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Фамилия, Имя Отчество&quot; любым корректным значением (например, &quot;Иванов Иван Иванович&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C7</id>
+				<title>FIOEmpty</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; сделано пустым, затем перевести курсор в другое поле</content><expected>поле &quot;Фамилия, Имя Отчество&quot; станет с красной рамкой, появится подсказка &quot;Укажите ваше ФИО&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C8</id>
+				<title>FIOOneWordOnly</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; заполнить одним словом (именем на кириллице), например &quot;Иван&quot;,  и перевести курсор в другое поле</content><expected>поле &quot;Фамилия, Имя Отчество&quot; станет с красной рамкой и появляется подсказка &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C10</id>
+				<title>FIOValidNameWithHyphen</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Поле &quot;Фамилия, Имя Отчество&quot; заполнить именем и/или фамилией через дефис, например &quot;Иван Лебедев-Кумач&quot;, и перевести курсор в другое поле
+
+</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>PhoneValidation</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C11</id>
+				<title>PhoneValid</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым корректным значением (например, &quot;9876543210&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C12</id>
+				<title>PhoneNonStartFrom9</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым 10-тизначным значением, но первая цифра не 9, и переключить курсор</content><expected>поле &quot;Контактный телефон&quot;  станет с красной рамкой и появляется подсказка &quot;Код оператора должен начинаться с цифры 9&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C13</id>
+				<title>PhoneNon10Numbers</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым не 10-тизначным  числовым значением, и переключить курсор</content><expected>поле &quot;Контактный телефон&quot; станет с красной рамкой и появляется подсказка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C14</id>
+				<title>PhoneEmpty</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Сделать поле &quot;Контактный телефон&quot; пустым , и переключить курсор</content><expected>поле &quot;Контактный телефон&quot; станет с красной рамкой и появляется подсказка &quot;Необходимо указать номер телефона&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>EmailValidation</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C15</id>
+				<title>EmailValid</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым корректным значением (например, &quot;a@b.c&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C16</id>
+				<title>EmailNotValidFormat</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;@&apos; и переключить курсор</content><expected>поле &quot;Электронная почта&quot; станет с красной рамкой и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
+<step>
+<index>2</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;.&apos; и переключить курсор</content><expected>поле &quot;Электронная почта&quot; станет с красной рамкой и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C17</id>
+				<title>EmailEmptyValid</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Сделать поле &quot;Электронная почта&quot; пустым , и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>CountryValidation</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C18</id>
+				<title>CountryValidRF</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Заполнить поле &quot;Гражданство&quot; значением &quot;Имею гражданство РФ&quot; и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C19</id>
+				<title>CoutryValidNonRF</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<step>
+<index>2</index><content>поле &quot;Укажите страну&quot; заполнено корректным значением из предложенного списка, например, БЕЛАРУСЬ, и перевести курсор в другое поле</content><expected>Поле остается без красной рамки</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C22</id>
+				<title>CoutryInvalidNonRF_Empty</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<step>
+<index>2</index><content>поле &quot;Укажите страну&quot; оставить пустым и перевести курсор в другое поле</content><expected>поле &quot;Укажите страну&quot; станет с красной рамкой и появляется подсказка &quot;Поле обязательное&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C23</id>
+				<title>CoutryInvalidNonRF_Unknown</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<step>
+<index>2</index><content>поле &quot;Укажите страну&quot; заполнить любым несуществующим значением, например &quot;Москва&quot;, и перевести курсор в другое поле</content><expected>поле &quot;Укажите страну&quot; станет с красной рамкой и появляется подсказка &quot;Выберите страну из выпадающего списка&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
