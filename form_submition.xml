@@ -20,15 +20,23 @@
 																								<references></references> 
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
-										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;
-[C3]
-[C6]
-[C11]
-[C15]
-[C18]
-флажок &quot;Я принимаю условия передачи информации&quot; отмечен</preconds>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Нажата кнопка &quot;Оставить заявку&quot;</content><expected>Информация успешно отправлена</expected></step>
+<index>1</index><content>заполнить поле &quot;Ваш город или регион&quot; любым значением из выпадающего списка и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Ваш город или регион&quot;</expected></step>
+<step>
+<index>2</index><content>заполнить поле &quot;Фамилия, Имя Отчество&quot; любым корректным значением (например, &quot;Иванов Иван Иванович&quot;) и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Фамилия, Имя, Отчество&quot;</expected></step>
+<step>
+<index>3</index><content>заполнить поле &quot;Контактный телефон&quot; любым корректным значением (например, &quot;9876543210&quot;) и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Контактный телефон&quot;</expected></step>
+<step>
+<index>4</index><content>заполнить поле &quot;Электронная почта&quot; любым корректным значением, например, &quot;a@b.c&quot; и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Электронная почта&quot;
+
+</expected></step>
+<step>
+<index>5</index><content>заполнить поле &quot;Гражданство&quot; значением &quot;Имею гражданство РФ&quot; и переключить курсор</content><expected>Поле заполнено значением из списка &quot;Имею гражданство РФ</expected></step>
+<step>
+<index>6</index><content>нажать на флажок в чекбоксе &quot;Я принимаю условия передачи информации&quot;</content><expected>появилась галочка в строке &quot;Я принимаю условия передачи информации&quot;</expected></step>
+<step>
+<index>7</index><content>нажать кнопку &quot;Оставить заявку&quot;</content><expected>информация успешно отправлена</expected></step>
 </steps_separated>
 									</custom>
 							</case>

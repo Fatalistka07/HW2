@@ -26,7 +26,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Ваш город или регион&quot; любым значением из выпадающего списка и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>заполнить поле &quot;Ваш город или регион&quot; любым значением из выпадающего списка и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Ваш город или регион&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -43,7 +43,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Ваш город или регион&quot; заполнено несуществующим в России городом/регионом, например &quot;Лондон&quot; и перевести курсор в другое поле</content><expected>поле &quot;Ваш город или регион&quot; станет с красной рамкой, появится подсказка &quot;Введите другой регион&quot;</expected></step>
+<index>1</index><content>поле &quot;Ваш город или регион&quot; заполнить несуществующим в России городом/регионом, например, &quot;Лондон&quot; и перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля &quot;Ваш город или регион&quot; и подсказка &quot;Введите другой регион&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -60,7 +60,41 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Ваш город или регион&quot; сделано пустым, затем перевести курсор в другое поле</content><expected>поле &quot;Ваш город или регион&quot; станет с красной рамкой</expected></step>
+<index>1</index><content>поле &quot;Ваш город или регион&quot; оставить пустым и перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля &quot;Ваш город или регион&quot; и подсказка &quot;Введите другой регион&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C29</id>
+				<title>RegionSearchWithSuggestions</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>начать вводить название региона в поле &quot;Ваш город или регион&quot;, например &quot;нижн&quot;</content><expected>под полем &quot;Ваш город или регион&quot; выводится список релевантных значений, подсвеченных жёлтым цветом</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C30</id>
+				<title>RegionSearchWithoutSuggestions</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>начать вводить название региона в поле &quot;Ваш город или регион&quot;, например &quot;нижнбла&quot;</content><expected>появилась красная рамка вокруг поля &quot;Ваш город или регион&quot; и подсказка Введите другой регион&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -84,7 +118,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Фамилия, Имя Отчество&quot; любым корректным значением (например, &quot;Иванов Иван Иванович&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>заполнить поле &quot;Фамилия, Имя Отчество&quot; любым корректным значением (например, &quot;Иванов Иван Иванович&quot;) и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Фамилия, Имя Отчество&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -101,7 +135,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; сделано пустым, затем перевести курсор в другое поле</content><expected>поле &quot;Фамилия, Имя Отчество&quot; станет с красной рамкой, появится подсказка &quot;Укажите ваше ФИО&quot;</expected></step>
+<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; сделать пустым, затем перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля &quot;Фамилия, Имя Отчество&quot; и подсказка &quot;Укажите ваше ФИО&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -118,7 +152,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; заполнить одним словом (именем на кириллице), например &quot;Иван&quot;,  и перевести курсор в другое поле</content><expected>поле &quot;Фамилия, Имя Отчество&quot; станет с красной рамкой и появляется подсказка &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</expected></step>
+<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; заполнить одним словом (именем на кириллице), например, &quot;Иван&quot; и перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля &quot;Фамилия, Имя Отчество&quot;  и подсказка &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -136,9 +170,9 @@
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;
 </preconds>
 										<steps_separated><step>
-<index>1</index><content>Поле &quot;Фамилия, Имя Отчество&quot; заполнить именем и/или фамилией через дефис, например &quot;Иван Лебедев-Кумач&quot;, и перевести курсор в другое поле
+<index>1</index><content>поле &quot;Фамилия, Имя Отчество&quot; заполнить именем и/или фамилией через дефис, например, &quot;Иван Лебедев-Кумач&quot; и перевести курсор в другое поле
 
-</content><expected>Поле остается без красной рамки</expected></step>
+</content><expected>введённое значение остаётся в поле &quot;Фамилия, Имя Отчество</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -162,7 +196,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым корректным значением (например, &quot;9876543210&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>заполнить поле &quot;Контактный телефон&quot; любым корректным значением (например, &quot;9876543210&quot;) и переключить курсор</content><expected>введённое значение остаётся в поле &quot;Контактный телефон&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -179,7 +213,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым 10-тизначным значением, но первая цифра не 9, и переключить курсор</content><expected>поле &quot;Контактный телефон&quot;  станет с красной рамкой и появляется подсказка &quot;Код оператора должен начинаться с цифры 9&quot;</expected></step>
+<index>1</index><content>заполнить поле &quot;Контактный телефон&quot; любым 10-значным значением, но первая цифра не 9 и переключить курсор</content><expected>появилась красная рамка вокруг поля &quot;Контактный телефон&quot; и подсказка &quot;Код оператора должен начинаться с цифры 9&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -196,7 +230,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Контактный телефон&quot; любым не 10-тизначным  числовым значением, и переключить курсор</content><expected>поле &quot;Контактный телефон&quot; станет с красной рамкой и появляется подсказка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected></step>
+<index>1</index><content>заполнить поле &quot;Контактный телефон&quot; любым не 10-значным  числовым значением и переключить курсор</content><expected>появилась красная рамка вокруг поля &quot;Контактный телефон&quot; и подсказка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -213,7 +247,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Сделать поле &quot;Контактный телефон&quot; пустым , и переключить курсор</content><expected>поле &quot;Контактный телефон&quot; станет с красной рамкой и появляется подсказка &quot;Необходимо указать номер телефона&quot;</expected></step>
+<index>1</index><content>сделать поле &quot;Контактный телефон&quot; пустым и переключить курсор</content><expected>появилась красная рамка вокруг поля  &quot;Контактный телефон&quot; и подсказка &quot;Необходимо указать номер телефона&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -237,7 +271,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым корректным значением (например, &quot;a@b.c&quot;) и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым корректным значением, например, &quot;a@b.c&quot; и переключить курсор</content><expected>Введённое значение остаётся в поле &quot;Электронная почта&quot; </expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -254,9 +288,9 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;@&apos; и переключить курсор</content><expected>поле &quot;Электронная почта&quot; станет с красной рамкой и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
+<index>1</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;@&apos; и переключить курсор</content><expected>Рамка вокруг поля &quot;Электронная почта&quot; выделяется красным и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
 <step>
-<index>2</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;.&apos; и переключить курсор</content><expected>поле &quot;Электронная почта&quot; станет с красной рамкой и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
+<index>2</index><content>Заполнить поле &quot;Электронная почта&quot; любым значением без символа &apos;.&apos; и переключить курсор</content><expected>Рамка вокруг поля &quot;Электронная почта&quot; выделяется красным и появляется подсказка &quot;Введите корректный адрес эл. почты&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -273,7 +307,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Сделать поле &quot;Электронная почта&quot; пустым , и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>Сделать поле &quot;Электронная почта&quot; пустым ,  переключить курсор</content><expected>Внешний вид поля не меняется</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -297,7 +331,7 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>Заполнить поле &quot;Гражданство&quot; значением &quot;Имею гражданство РФ&quot; и переключить курсор</content><expected>Поле остается без красной рамки</expected></step>
+<index>1</index><content>заполнить поле &quot;Гражданство&quot; значением &quot;Имею гражданство РФ&quot; и переключить курсор</content><expected>Поле заполнено значением из списка &quot;Имею гражданство РФ</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -314,9 +348,9 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнить значением &quot;Не имею гражданство РФ&quot;</content><expected>появилось поле &quot;Укажите страну&quot;</expected></step>
 <step>
-<index>2</index><content>поле &quot;Укажите страну&quot; заполнено корректным значением из предложенного списка, например, БЕЛАРУСЬ, и перевести курсор в другое поле</content><expected>Поле остается без красной рамки</expected></step>
+<index>2</index><content>поле &quot;Укажите страну&quot; заполнить корректным значением из предложенного списка, например, &quot;БЕЛАРУСЬ&quot;, и перевести курсор в другое поле</content><expected>в поле &quot;Укажите страну&quot; появилось значение из списка и индикатор в виде зелёной галочки</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -333,9 +367,9 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнить значением &quot;Не имею гражданство РФ&quot;</content><expected>появилось поле &quot;Укажите страну&quot;</expected></step>
 <step>
-<index>2</index><content>поле &quot;Укажите страну&quot; оставить пустым и перевести курсор в другое поле</content><expected>поле &quot;Укажите страну&quot; станет с красной рамкой и появляется подсказка &quot;Поле обязательное&quot;</expected></step>
+<index>2</index><content>поле &quot;Укажите страну&quot; оставить пустым и перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля  &quot;Укажите страну&quot; и подсказка &quot;Поле обязательное&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
@@ -352,9 +386,69 @@
 										<automation_type><id>0</id><value> None</value></automation_type>
 										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
 										<steps_separated><step>
-<index>1</index><content>поле &quot;Гражданство&quot; заполнено значением &quot;Не имею гражданство РФ&quot;</content><expected>Появилось поле &quot;Укажите страну&quot;</expected></step>
+<index>1</index><content>поле &quot;Гражданство&quot; заполнить значением &quot;Не имею гражданство РФ&quot;</content><expected>появилось поле &quot;Укажите страну&quot;</expected></step>
 <step>
-<index>2</index><content>поле &quot;Укажите страну&quot; заполнить любым несуществующим значением, например &quot;Москва&quot;, и перевести курсор в другое поле</content><expected>поле &quot;Укажите страну&quot; станет с красной рамкой и появляется подсказка &quot;Выберите страну из выпадающего списка&quot;</expected></step>
+<index>2</index><content>поле &quot;Укажите страну&quot; заполнить любым несуществующим значением, например, &quot;Москва&quot; и перевести курсор в другое поле</content><expected>появилась красная рамка вокруг поля &quot;Укажите страну&quot; и подсказка &quot;Выберите страну из выпадающего списка&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>ConditionsAcceptValidation</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C26</id>
+				<title>ConditionsAreShownByLink</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>нажать на ссылку &quot;условия передачи информации&quot;</content><expected>появилась страница &quot;Условия передачи информации&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C27</id>
+				<title>ConditionsAreCheckedByText</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на строку &quot;Я принимаю условия передачи информации&quot;
+
+</content><expected>Появилась галочка в строке &quot;Я принимаю условия передачи информации&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C28</id>
+				<title>ConditionsAreCheckedBySquare</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Открыта форма &quot;Заполните контактную информацию&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>нажать на флажок в чекбоксе &quot;Я принимаю условия передачи информации&quot;</content><expected>появилась галочка в строке &quot;Я принимаю условия передачи информации&quot;</expected></step>
 </steps_separated>
 									</custom>
 							</case>
